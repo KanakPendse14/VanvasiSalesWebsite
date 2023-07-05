@@ -14,7 +14,7 @@ const HeroSection = () => {
       </div>
       <div className='right'>
         <h1 className='hero-section-h1'>VANVASI TRIBAL HUB</h1>
-        <div className="button-div"><button className='hero-section-button'>Shop Now</button></div>
+        <div className="button-div"><a href="/product"><button className='hero-section-button'>Shop Now</button></a></div>
 
       </div>
     
@@ -25,7 +25,7 @@ const HeroSection = () => {
       <div className='right'>
         <p className="hero-section-p">
 I'm a paragraph. Click here to add your own text and edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make changes to the font. I’m a great place for you to tell a story and let your users know a little more about you.</p>
-<div className="button-div"><button className='hero-section-button'>Read More</button></div>
+<div className="button-div"><a href="/about"><button className='hero-section-button'>Read More</button></a></div>
       </div>
       <div className='left'>
        

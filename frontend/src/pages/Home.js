@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 import HeroSection from "../components/HeroSection";
 import Multicarousel from "../components/MultiCarousel";
 import Footer from "../components/Footer.jsx";
-import Review from "../components/Review";
+
 
 // import Newsletter from "../components/Newsletter";
 // import Products from "../components/Products";
@@ -19,7 +19,6 @@ const Home = () => {
       <NavBar />
       <HeroSection/>
       <Multicarousel/> 
-      <Review/>
       <Footer/>
       {/* <Slider />
       <Categories />
