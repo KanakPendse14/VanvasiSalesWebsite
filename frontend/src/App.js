@@ -6,6 +6,7 @@ import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 
 import Products from './pages/Products';
+import ProductDetail from './pages/ProductDetail';
 
 // import SingleProduct from './pages/SingleProduct';
 // import Cart from './pages/Cart';
@@ -22,6 +23,7 @@ const App=()=>{
       <Route path="/about" element={<AboutUs/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/product" element={<Products/>}/>
+      <Route path="/productdetail" element={<ProductDetail/>}/>
       </Routes>
       </BrowserRouter>
   )
