@@ -313,3 +313,56 @@ color:#fff
   width:200px;
   height:200px;
 }
+.artist-page{
+  font-family: 'Playfair Display', serif;
+}
+.artist-info{
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  height:400px;
+  margin:-20px 100px 0 100px;
+  font-family: 'Playfair Display', serif;
+  padding:50px;
+  
+}
+.artist{
+  height:300px;
+  width:300px;
+  /* border:2px solid #282c34; */
+  border-radius:50%;
+  margin-left:100px;
+  margin-right:50px;
+  
+}
+.desc{
+  height:200px;
+  width:400px;
+  /* border:2px solid #282c34; */
+  border-radius:40px;
+  background: rgb(241, 146, 30);
+  
+  padding:20px;
+}
+.desc-p{
+  font-size:15px;
+}
+.artist .img-artist{
+  width: 280px; height: 280px;
+  border-radius:50% 50% 50% 50%;
+  border:3px solid brown; 
+}
+.divider{
+  position: absolute;
+  height:170%;
+  width: 0;
+  border: 3px dashed #e2833f6b;
+  top:385%;
+  left: 50%;
+}
+.traveller{
+  position:sticky;
+  top:5%;
+  transform: rotate(90deg);
+  z-index: 2;
+}

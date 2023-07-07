@@ -6,7 +6,7 @@ function NavBar() {
   return (
     <>
     <nav>
-      <a href="/"><img src="images/vanvasiLogo.jpg"/>
+      <a href="/"><img src="images/vanvasiLogo.jpg" alt="logo"/>
     
         </a>
       <div>
@@ -31,7 +31,7 @@ function NavBar() {
           </Nav> */}
         {/* </Container>
       </Navbar> */}
-      <br />
+      
       
 
      
