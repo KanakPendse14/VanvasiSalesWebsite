@@ -3,7 +3,7 @@ import React from 'react'
 const Artistdesc = () => {
   return (
     <div className="artist-page">
-       <h1 className="mc-title">OUR ARTISTS</h1>
+       <h1 className="mc-title"> KNOW OUR ARTISTS!</h1>
        
     <div className="artist-info">
       <div className="artist">

@@ -8,13 +8,6 @@ import AboutUs from './pages/AboutUs';
 import Products from './pages/Products';
 import ProductDetail from './pages/ProductDetail';
 
-// import SingleProduct from './pages/SingleProduct';
-// import Cart from './pages/Cart';
-// import ErrorPage from './pages/ErrorPage';
-
-// import { ThemeProvider } from 'styled-components';
-// import Header from './components/Header';
-
 const App=()=>{
   return (
     <BrowserRouter>

@@ -1,6 +1,6 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 function NavBar() {
   return (
@@ -15,26 +15,11 @@ function NavBar() {
           <li><a href="/about">About Us</a></li>
           <li><a href="/product">Shop Now</a></li>
           <li><a href="/contact">Contact Us</a></li>
+          <li> <a href='/'>
+                <FontAwesomeIcon icon={faShoppingCart} /></a></li>
         </ul>
       </div>
-    </nav>
-      {/* <Navbar bg="dark" data-bs-theme="dark">
-        <Container>
-          <Navbar.Brand href="#home">Vanvasi Kalyan Ashram</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/about">About Us</Nav.Link>
-            <Nav.Link href="/product">Shop Now</Nav.Link>
-            <Nav.Link href="/contact">Contact Us</Nav.Link>
-            
-            
-          </Nav> */}
-        {/* </Container>
-      </Navbar> */}
-      
-      
-
-     
+    </nav>   
     </>
   );
 }
