@@ -16,6 +16,7 @@ import Artistdesc from "../components/Artistdesc";
 const Home = () => {
   return (
     <div>
+      
       {/* <Announcement /> */}
       <NavBar />
       <HeroSection/>
