@@ -1,6 +1,5 @@
 {
   "name": "backend",
-  
   "version": "1.0.0",
   "description": "ecommerece rest api",
   "main": "server.js",
@@ -8,23 +7,35 @@
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
-    "frontend":"npm start --prefix ./frontend",
+    "frontend": "npm start --prefix ./frontend",
     "dev": "concurrently \"npm run server\" \"npm run frontend\""
-
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
+    "bootstrap": "^5.3.0",
     "colors": "^1.4.0",
     "concurrently": "^8.2.0",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
     "jsonwebtoken": "^9.0.1",
+    "mdb-react-ui-kit": "^6.1.0",
     "mongoose": "^7.3.4",
     "morgan": "^1.10.0",
-    "nodemon": "^3.0.1"
+    "nodemon": "^3.0.1",
+    "react-bootstrap": "^2.8.0",
+    "react-multi-carousel": "^2.8.4",
+    "react-router-dom": "^6.14.1",
+    "react-scripts": "^5.0.1",
+    "react-toastify": "^9.1.3",
+    "slugify": "^1.6.6",
+    "web-vitals": "^3.4.0"
   }
 }
