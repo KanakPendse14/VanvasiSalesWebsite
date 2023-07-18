@@ -566,3 +566,45 @@ label {
   margin-left:30px;
   margin-top:20px;
 }
+
+.Body{
+  background-color: #c54d15;
+  margin-left: 20px;
+}
+.subbody{
+  margin-left: 30px;
+}
+.container{
+  margin: 40px;
+}
+
+.product{
+  align-self: normal;
+  margin-top: 30px;
+  text-align: right;
+  background-color: #891d1d;
+}
+.details{
+  align-items: flex-end;
+}
+
+.Hello{
+align-items: right;
+}
+
+.productpicture{
+  margin-left: 10px;
+  box-sizing: content-box;
+}
+.Flex{
+  /* padding: 5px;
+  margin-left: 5px;
+  border: 2px;
+  border-radius: 5px; */
+  background-color: brown;
+  /* color:#0e0e0e; */
+  /* width:80px;
+  height:45px;
+  text-align: center;
+  font-size:2px; */
+}
