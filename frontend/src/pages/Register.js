@@ -10,7 +10,6 @@ const Register = () => {
   const [password, setPassword] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [answer, setAnswer] = useState('');
   const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -21,7 +20,6 @@ const Register = () => {
         password,
         phone,
         address,
-        answer,
       });
       if (res && res.data.success) {
         toast.success(res.data && res.data.message);
@@ -102,23 +100,15 @@ const Register = () => {
                 required
               />
             </div>
-            <div className="form-group mt-3">
-              <label>What's your Grandfather's name?</label>
-              <input
-                type="text"
-                value={answer}
-                onChange={(e) => setAnswer(e.target.value)}
-                className="form-control mt-1"
-                placeholder="Enter your answer"
-                required
-              />
-            </div>
             <div className="d-grid gap-2 mt-3">
               <button type="submit" className="btn-primary">
-                REGISTER
+                Submit
               </button>
               <ToastContainer />
             </div>
+            <p className="forgot-password text-right mt-2">
+              Forgot <a href="#">password?</a>
+            </p>
             <p className="forgot-password text-right mt-2">
               Already have an account? <a href="/login">LOGIN</a>
             </p>
