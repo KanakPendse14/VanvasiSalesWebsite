@@ -25,11 +25,7 @@ const Home = () => {
       <Artistdesc />
       <Footer />
 
-      {/* <Slider />
-      <Categories />
-      <Products/>
-      <Newsletter/>
-      <Footer/> */}
+
     </div>
   );
 };
