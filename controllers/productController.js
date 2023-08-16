@@ -7,11 +7,12 @@ export const createProductController = async(req,res) =>{
         const {name,slug,description,price,category,quantity,shipping} = req.fields 
         const {photo} = req.files
 
+        //validation
         switch(true){
             case !name:
                 return res.status(500).send({error:'Name is Required'})
             case !description:
-                return res.status(500).send({error:'description is Required'})
+                return res.status(500).send({error:'Description is Required'})
             case !price:
                 return res.status(500).send({error:'Price is Required'})
             case !category:
@@ -19,7 +20,7 @@ export const createProductController = async(req,res) =>{
             case !quantity:
                 return res.status(500).send({error:'Quantity is Required'})
             case !photo && photo.size > 1000000:
-                return res.status(500).send({error:'photo is Required and should be less than 1 MB'})
+                return res.status(500).send({error:'Photo is Required and should be less than 1 MB'})
         }
         
         const products = new productModel({...req.fields, slug:slugify(name)});
@@ -28,13 +29,14 @@ export const createProductController = async(req,res) =>{
             products.photo.contentType = photo.type
         }
         await products.save();
-        res.status(200).send({
+        res.status(201).send({
             success:true,
-            messgae:'Product creates successfully',
+            message:'Product created successfully',
             products,
         })
 
     }catch(error){
+        console.log(error)
         res.status(500).send({
             success:false,
             error,
@@ -47,12 +49,13 @@ export const createProductController = async(req,res) =>{
 //get all products
 export const getProductController = async(req,res) =>{
     try{
-        const products = await productModel.find({}).select("photo").limit(12).sort({createdAt:-1})
+        const products = await productModel.find({}).populate('category').select("-photo").limit(12).sort({createdAt:-1})
         res.status(200).send({
             success:true,
+            counTotal: products.length,
             message:"All Products ",
             products,
-            counTotal: products.length,
+            
         });
 
     }catch(error){
@@ -64,19 +67,18 @@ export const getProductController = async(req,res) =>{
         })
     }
 };
-
+//get single product
 export const getSingleProductController = async(req,res) => {
     try{
         const product = await productModel.findOne({slug:req.params.slug}).select("-photo").populate("category")
         res.status(200).send({
             success: true,
             message:"Single Product fetched",
-            products,
+            product,
         })
 
     }catch(error){
         console.log(error)
-
         res.status(500).send({
             success:false,
             message: 'Error while getting single product',
@@ -85,7 +87,7 @@ export const getSingleProductController = async(req,res) => {
         })
     }
 };
-
+//get photo
 export const productPhotoController = async(req,res) => {
     try{
         const product = await productModel.findById(req.params.pid).select("photo")
@@ -98,26 +100,26 @@ export const productPhotoController = async(req,res) => {
         console.log(error)
         res.status(500).send({
             success:false,
-            message:'Error uploading photo to server',
+            message:'Error while getting photo',
             error,
         })
     }
 };
 
- 
+ //delete product
 export const deleteProductController= async(req,res)=>{
     try{
         await productModel.findByIdAndDelete(req.params.pid).select("-photo")
         res.status(200).send({
             success:true,
-            message:'Products deleted successfully',
+            message:'Product deleted successfully',
         })
 
     }catch(error){
         console.log(error)
         res.status(500).send({
             success:false,
-            message:`Failed deleting ${productId}`,
+            message:'Error while deleting product',
             error,
         })
     }
